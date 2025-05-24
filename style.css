@@ -1,6 +1,25 @@
 body{
     background-color: rgb(135, 132, 132);
-    margin: 5px;
+    margin: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header{
+    background-color: rgb(29, 29, 40);
+    padding: 10px;
+    display: flex;
+    flex: 1;
+}
+
+.grid-size{
+    width: auto;    
+    height: auto;
+    background-color: rgb(218, 212, 212) ;
+    font-size: 30px;
+    display: flex;
+    border-radius: 4px;
+    
+    
 }
 .box{
     background-color: white;
@@ -20,5 +39,7 @@ body{
 .container{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 3px;
+    margin: 5px;
+    padding: 3px;
 }
