@@ -7,7 +7,8 @@ let isMouseDown= false;
 
         
 function createGrid(gridSize) {
-   container.innerHTML=""
+   container.innerHTML="";
+   container.style.backgroundColor="white";
     for (let row = 0; row < gridSize; row++) {
        const rowDiv=document.createElement("div");
         rowDiv.className="row";  
