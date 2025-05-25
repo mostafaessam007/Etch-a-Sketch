@@ -1,9 +1,8 @@
 const container = document.querySelector(".container");
 const sizeBtn = document.querySelector(".grid-size");
+const resetBtn = document.querySelector(".reset");
 let isMouseDown= false;
 
-
-// create a loop that creates 10 divs
 
         
 function createGrid(gridSize) {
@@ -45,18 +44,32 @@ function createGrid(gridSize) {
 
 sizeBtn.addEventListener("click",()=>{
    let gridSize = prompt("Enter Grid Size");
-   if (gridSize>100) {
+
+   if (gridSize ===null) {
+      return;
+   }
+
+   gridSize = parseInt(gridSize);
+
+   if (!gridSize||gridSize<=0) {
+      alert ("Please enter a valid number!")
+   }
+
+  else if (gridSize>100) {
       alert ("The maximum size is 100 squares per side");
     
    }
-   else if (gridSize<= 100) {
+   else  {
       createGrid(gridSize);
    }
-   else {
-      alert ("Please enter a valid number!");
-   }
    
-  
+})
+
+resetBtn.addEventListener("click", ()=> {
+   const boxes = document.querySelectorAll(".box")
+   boxes.forEach(box => {
+      box.style.backgroundColor="white"
+   });
 })
 
 
